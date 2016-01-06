@@ -1,0 +1,21 @@
+// ----------------------------------------------------
+// Form element styles
+// ----------------------------------------------------
+button {
+  border: none;
+  @extend .transition;
+  
+  &:focus {outline: none;}
+  
+  &.large {
+    width: 70%;
+    padding: 10px;
+    border-radius: 27px;
+    
+    &.primary {
+      background-color: $pri-1;
+      color: white;
+      &:focus {background-color: darken($pri-1, 5%);}
+    }
+  }
+}

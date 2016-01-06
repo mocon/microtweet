@@ -1,0 +1,36 @@
+// ----------------------------------------------------
+// Base styles
+// ----------------------------------------------------
+html, body {
+  @extend .fill;
+}
+
+body {
+  font-family: $hind;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 300;
+  background-color: $gray-3;
+}
+
+a {
+  color: inherit;
+  
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+ul {
+  list-style: none;
+  @extend .no-margin;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 15px;
+}
