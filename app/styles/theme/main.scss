@@ -88,7 +88,10 @@
 .trending {
   margin-bottom: $double-unit;
   
-  li {line-height: $line-height * 1.2;}
+  li {
+    line-height: $line-height * 1.2;
+    @extend .ellipsis;
+  }
 }
 
 // List of users to follow
@@ -109,7 +112,8 @@
   }
   
   p {
-    margin: 0 $double-unit 0 ($header-height / 2) + $single-unit;
+    margin: 0 ($double-unit + $single-unit) 0 ($header-height / 2) + $single-unit;
+    @extend .ellipsis;
     
     &:nth-of-type(1) {
       font-size: $font-size * 1.2;
