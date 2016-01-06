@@ -7,6 +7,7 @@ button {
   
   &:focus {outline: none;}
   
+  // Large, rounded buttons
   &.large {
     width: 70%;
     padding: $single-unit;
@@ -16,6 +17,21 @@ button {
       background-color: $pri-1;
       color: white;
       &:focus {background-color: darken($pri-1, 5%);}
+    }
+  }
+  
+  // Small buttons in <li>s
+  &.add {
+    display: block;
+    width: $double-unit;
+    height: $double-unit;
+    line-height: $double-unit;
+    background: transparent;
+    border: 1px solid $gray-2;
+    border-radius: 3px;
+    
+    &:active {
+      background: $gray-2;
     }
   }
 }

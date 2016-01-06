@@ -9,6 +9,7 @@ body {
   line-height: $line-height;
   font-weight: $light-text;
   background-color: $gray-3;
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -32,6 +33,7 @@ h1, h2, h3, h4, h5 {
 
 label {
   font-weight: $light-text;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
   @extend .no-margin;
 }

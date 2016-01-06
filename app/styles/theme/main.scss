@@ -5,7 +5,7 @@
   position: relative;
   height: calc(100% - #{$header-height});
   margin-top: $header-height;
-  padding: $double-unit $single-unit;
+  padding: $double-unit;
   z-index: 1;
   overflow: scroll;
   
@@ -32,10 +32,10 @@
   overflow-x: hidden;
   z-index: 3;
   
-  @media #{$sm} {z-index: 1;}
+  @media #{$sm}, #{$md} {z-index: 1;}
   
   .user-info {
-    padding: $double-unit 0;
+    padding: $single-unit 0;
     text-align: center;
     color: white;
     margin-bottom: $double-unit;
@@ -55,7 +55,7 @@
   
   .photo-grid {
     overflow: hidden;
-    margin: 0 -($single-unit + 1px); // to hide 1px value rounding errors
+    margin: 0 (- $double-unit - 1px); // to hide 1px value rounding errors
     
     .col-xs-4 {
       padding: 0;
@@ -65,7 +65,6 @@
   }
   
   .actions {
-    padding: 0 $single-unit;
     margin: $double-unit 0;
     color: white;
     
@@ -85,8 +84,50 @@
   }
 }
 
-// Right column
-.col-options {background-color: $gray-4;}
+// Trending hashtags
+.trending {
+  margin-bottom: $double-unit;
+  
+  li {line-height: $line-height * 1.2;}
+}
+
+// List of users to follow
+.users li {
+  position: relative;
+  line-height: $line-height * 1.2;
+  
+  .avatar {
+    position: absolute;
+    left: 0;
+    top: $single-unit / 2;
+    width: $header-height / 2;
+    height: $header-height / 2;
+    border-radius: $header-height / 4;
+    border: 1px solid $gray-2;
+    background-image: url("https://avatars2.githubusercontent.com/u/4172870?v=3&s=460");
+    background-size: cover;
+  }
+  
+  p {
+    margin: 0 $double-unit 0 ($header-height / 2) + $single-unit;
+    
+    &:nth-of-type(1) {
+      font-size: $font-size * 1.2;
+      color: $gray-1;
+    }
+    
+    &:nth-of-type(2) {
+      color: $gray-2;
+      margin-top: (- $single-unit / 2);
+    }
+  }
+  
+  .add {
+    position: absolute;
+    top: $single-unit / 2;
+    right: 0;
+  }
+}
 
 // Totals
 .totals .col-sm-3 {
@@ -99,4 +140,21 @@
   label {color: $gray-2;}
   
   h4 {margin: 0;}
+}
+
+// Right column
+.col-options {
+  background-color: $gray-4;
+  padding-bottom: $quad-unit * 2;
+  
+  @media #{$sm} {margin-top: auto;}
+  
+  a {color: $pri-2;}
+  
+  label {font-size: $font-size * 1.2;}
+  
+  .more {
+    font-size: $font-size;
+    margin-top: 1px;
+  }
 }
