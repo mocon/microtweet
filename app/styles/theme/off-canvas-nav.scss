@@ -4,6 +4,7 @@
 .app-wrapper {
   position: relative;
   overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   @extend .fill;
   
   .app-canvas {
