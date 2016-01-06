@@ -14,18 +14,14 @@
   z-index: 1;
   overflow: scroll;
   
-  @media #{$sm} {
-    height: auto;
-  }
+  @media #{$sm} {height: auto;}
 }
 
 .col-tweets {
   padding-left: 30px;
   padding-right: 30px;
   
-  @media #{$sm} {
-    margin-top: auto;
-  }
+  @media #{$sm} {margin-top: auto;}
   
   section {
     overflow: hidden;
@@ -49,9 +45,7 @@
     color: white;
     margin-bottom: 30px;
     
-    h4 {
-      margin: 15px 0;
-    }
+    h4 {margin: 15px 0;}
     
     .avatar {
       display: block;
@@ -71,9 +65,7 @@
     .col-xs-4 {
       padding: 0;
       
-      img {
-        width: 100%;
-      }
+      img {width: 100%;}
     }
   }
   
@@ -103,9 +95,7 @@
 }
 
 // Right column
-.col-options {
-  background-color: $gray-4;
-}
+.col-options {background-color: $gray-4;}
 
 // Totals
 .totals .col-sm-3 {
@@ -113,9 +103,7 @@
   padding: 15px 0;
   border-bottom: 4px solid transparent;
   
-  &.active {
-    border-color: $pri-2;
-  }
+  &.active {border-color: $pri-2;}
   
   label {
     color: $gray-2;
@@ -124,13 +112,55 @@
     margin: 0;
   }
   
-  h4 {
-    margin: 0;
-  }
+  h4 {margin: 0;}
 }
 
 // Tweets
-.tweets li {
-  padding: 30px;
+.tweets > li {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 30px 20px;
   border-bottom: 1px solid $gray-3;
+  
+  .avatar {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    margin-right: 15px;
+    
+    img {
+      width: $header-height / 2;
+      height: $header-height / 2;
+      border-radius: $header-height / 4;
+    }
+  }
+  
+  .post {
+    padding-left: $header-height / 2 + 15px;
+    
+    h4 {
+      margin: 0;
+      float: left;
+      
+      small {
+        font-size: 16px;
+        color: $gray-2;
+      }
+      
+      .fa-refresh {color: $green-1;}
+    }
+    
+    .date {
+      float: right;
+      font-size: 16px;
+      color: $gray-2;
+    }
+    
+    li {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+    }
+    
+    a {color: $gray-2;}
+  }
 }
