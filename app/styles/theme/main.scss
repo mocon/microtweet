@@ -13,11 +13,19 @@
   padding: 30px 15px;
   z-index: 1;
   overflow: scroll;
+  
+  @media #{$sm} {
+    height: auto;
+  }
 }
 
 .col-tweets {
   padding-left: 30px;
   padding-right: 30px;
+  
+  @media #{$sm} {
+    margin-top: auto;
+  }
   
   section {
     overflow: hidden;
@@ -30,7 +38,10 @@
 // Left column
 .col-info {
   background-color: $pri-2;
+  overflow-x: hidden;
   z-index: 3;
+  
+  @media #{$sm} {z-index: 1;}
   
   .user-info {
     padding: 30px 0;
@@ -55,7 +66,7 @@
   
   .photo-grid {
     overflow: hidden;
-    margin: 0 -15px;
+    margin: 0 -16px; // instead of -15px, to hide 1px value rounding errors
     
     .col-xs-4 {
       padding: 0;
@@ -100,9 +111,10 @@
 .totals .col-sm-3 {
   text-align: center;
   padding: 15px 0;
+  border-bottom: 4px solid transparent;
   
   &.active {
-    border-bottom: 4px solid $pri-2;
+    border-color: $pri-2;
   }
   
   label {
