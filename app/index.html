@@ -31,7 +31,7 @@
     <header>
       <div class="col-xs-4 col-sm-5">
         <ul>
-          <li><a href="#"><i class="fa fa-pencil"></i></a></li>
+          <li onclick="toggleLeftNav();"><a href="#"><i class="fa fa-pencil"></i></a></li>
           <li><a href="#"><i class="fa fa-bell-o"></i></a></li>
           <li><a href="#"><i class="fa fa-at"></i></a></li>
           <li><a href="#"><i class="fa fa-cubes"></i></a></li>
@@ -42,223 +42,256 @@
       </div>
       <div class="col-xs-4 col-sm-5 search">
         <input type="text" placeholder="Search" class="hidden-xs">
-        <div class="user-avatar"></div>
+        <div onclick="toggleRightNav();" class="user-avatar"></div>
       </div>
     </header>
     
-    <!-- Left column info -->
-    <div class="col-info col-sm-4 col-md-3">
-      <div class="user-info">
-        <div class="avatar"></div>
-        <h4>Myles O'Connor</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla lorem vestibulum, pulvinar mi et, porta diam.</p>
-        <p><i class="fa fa-link"></i> <a href="#">myles.la</a></p>
-        <button class="large primary">Follow</button>
-      </div>
-      
-      <div class="photo-grid">
-        <div class="col-xs-4"><img src="images/photo-1.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-2.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-3.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-4.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-5.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-6.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-7.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-8.jpg"></div>
-        <div class="col-xs-4"><img src="images/photo-9.jpg"></div>
-      </div>
-      
-      <div class="actions">
-        <label>Recent Activity</label>
-        <ul>
-          <li><i class="fa fa-fw fa-plus"></i>Followed <a href="#">Someone</a></li>
-          <li><i class="fa fa-fw fa-reply"></i>Replied to <a href="#">Someone</a></li>
-          <li><i class="fa fa-fw fa-refresh"></i>Retweeted <a href="#">Someone</a></li>
-          <li><i class="fa fa-fw fa-refresh"></i>Retweeted <a href="#">Someone</a></li>
-          <li><i class="fa fa-fw fa-star"></i>Favorited <a href="#">Someone</a></li>
-        </ul>
-      </div>
+    <!-- Off-canvas mobile nav -->
+    <div class="app-left-menu">
+      <label>Left Navigation</label>
+      <ul>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+      </ul>
+    </div>
+    <div class="app-right-menu">
+      <label>Right Navigation</label>
+      <ul>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+        <li><a href="#">Navigation Item</a></li>
+      </ul>
     </div>
     
-    <!-- Center column tweets -->
-    <main class="col-tweets col-sm-8 col-md-6">
-      <section class="totals">
-        <div class="col-sm-3 col-xs-6 active">
-          <label>Tweets</label>
-          <h4>200</h4>
+    <!-- Off-canvas main wrapper element -->
+    <div class="app-wrapper">
+      <div class="app-canvas">
+        
+        <!-- Left column info -->
+        <div class="col-info col-sm-4 col-md-3">
+          <div class="user-info">
+            <div class="avatar"></div>
+            <h4>Myles O'Connor</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque fringilla lorem vestibulum, pulvinar mi et, porta diam.</p>
+            <p><i class="fa fa-link"></i> <a href="#">myles.la</a></p>
+            <button class="large primary">Follow</button>
+          </div>
+          
+          <div class="photo-grid">
+            <div class="col-xs-4"><img src="images/photo-1.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-2.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-3.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-4.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-5.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-6.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-7.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-8.jpg"></div>
+            <div class="col-xs-4"><img src="images/photo-9.jpg"></div>
+          </div>
+          
+          <div class="actions">
+            <label>Recent Activity</label>
+            <ul>
+              <li><i class="fa fa-fw fa-plus"></i>Followed <a href="#">Someone</a></li>
+              <li><i class="fa fa-fw fa-reply"></i>Replied to <a href="#">Someone</a></li>
+              <li><i class="fa fa-fw fa-refresh"></i>Retweeted <a href="#">Someone</a></li>
+              <li><i class="fa fa-fw fa-refresh"></i>Retweeted <a href="#">Someone</a></li>
+              <li><i class="fa fa-fw fa-star"></i>Favorited <a href="#">Someone</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col-sm-3 col-xs-6">
-          <label>Photos/Videos</label>
-          <h4>450</h4>
+        
+        <!-- Center column tweets -->
+        <main class="col-tweets col-sm-8 col-md-6">
+          <section class="totals">
+            <div class="col-sm-3 col-xs-6 active">
+              <label>Tweets</label>
+              <h4>200</h4>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <label>Photos/Videos</label>
+              <h4>450</h4>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <label>Following</label>
+              <h4>65</h4>
+            </div>
+            <div class="col-sm-3 col-xs-6">
+              <label>Followers</label>
+              <h4>1M</h4>
+            </div>
+          </section>
+          
+          <section>
+            <ul class="tweets">
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><i class="fa fa-refresh"></i><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <div class="avatar">
+                  <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
+                </div>
+                <div class="post">
+                  <h4><a href="#">User Name</a> <small>@username</small></h4>
+                  <div class="date">Yesterday</div>
+                  <div class="clearfix"></div>
+                  <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
+                  <ul>
+                    <li><a href="#"><i class="fa fa-reply"></i></a></li>
+                    <li><a href="#"><i class="fa fa-star"></i></a></li>
+                    <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+                    <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </main>
+        
+        <!-- Right column options -->
+        <div class="col-options col-md-3 hidden-sm">
+          <div class="trending">
+            <label>Trending</label><a class="more pull-right" href="#">More</a>
+            <div class="clearfix"></div>
+            <ul>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+              <li><a href="#">#something</a></li>
+            </ul>
+          </div>
+          
+          <div class="who-to-follow">
+            <label>Who To Follow</label><a class="more pull-right" href="#">More</a>
+            <div class="clearfix"></div>
+            <ul class="users">
+              <li>
+                <div class="avatar"></div>
+                <p>First Lastname</p>
+                <p>Title Goes Here</p>
+                <button class="add">+</button>
+              </li>
+              <li>
+                <div class="avatar"></div>
+                <p>First Lastname</p>
+                <p>Title Goes Here</p>
+                <button class="add">+</button>
+              </li>
+              <li>
+                <div class="avatar"></div>
+                <p>First Lastname</p>
+                <p>Title Goes Here</p>
+                <button class="add">+</button>
+              </li>
+              <li>
+                <div class="avatar"></div>
+                <p>First Lastname</p>
+                <p>Title Goes Here</p>
+                <button class="add">+</button>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="col-sm-3 col-xs-6">
-          <label>Following</label>
-          <h4>65</h4>
-        </div>
-        <div class="col-sm-3 col-xs-6">
-          <label>Followers</label>
-          <h4>1M</h4>
-        </div>
-      </section>
-      
-      <section>
-        <ul class="tweets">
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><i class="fa fa-refresh"></i><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="avatar">
-              <img src="https://avatars2.githubusercontent.com/u/4172870?v=3&s=460">
-            </div>
-            <div class="post">
-              <h4><a href="#">User Name</a> <small>@username</small></h4>
-              <div class="date">Yesterday</div>
-              <div class="clearfix"></div>
-              <div class="content">Nulla facilisi. Fusce euismod magna sed leo sagittis, non tincidunt velit accumsan. Mauris ac tempus turpis. Proin sollicitudin ullamcorper arcu a dictum. Vivamus accumsan finibus enim, facilisis facilisis dolor.</div>
-              <ul>
-                <li><a href="#"><i class="fa fa-reply"></i></a></li>
-                <li><a href="#"><i class="fa fa-star"></i></a></li>
-                <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-                <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
     
-    <!-- Right column options -->
-    <div class="col-options col-md-3 hidden-sm">
-      <div class="trending">
-        <label>Trending</label><a class="more pull-right" href="#">More</a>
-        <div class="clearfix"></div>
-        <ul>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-          <li><a href="#">#something</a></li>
-        </ul>
-      </div>
-      
-      <div class="who-to-follow">
-        <label>Who To Follow</label><a class="more pull-right" href="#">More</a>
-        <div class="clearfix"></div>
-        <ul class="users">
-          <li>
-            <div class="avatar"></div>
-            <p>First Lastname</p>
-            <p>Title Goes Here</p>
-            <button class="add">+</button>
-          </li>
-          <li>
-            <div class="avatar"></div>
-            <p>First Lastname</p>
-            <p>Title Goes Here</p>
-            <button class="add">+</button>
-          </li>
-          <li>
-            <div class="avatar"></div>
-            <p>First Lastname</p>
-            <p>Title Goes Here</p>
-            <button class="add">+</button>
-          </li>
-          <li>
-            <div class="avatar"></div>
-            <p>First Lastname</p>
-            <p>Title Goes Here</p>
-            <button class="add">+</button>
-          </li>
-        </ul>
-      </div>
-    </div>
+      </div><!-- /.app-canvas -->
+    </div><!-- /.app-wrapper -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

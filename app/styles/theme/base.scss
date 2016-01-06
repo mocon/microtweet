@@ -10,6 +10,8 @@ body {
   font-weight: $light-text;
   background-color: $gray-3;
   text-rendering: optimizeLegibility;
+  
+  @media #{$sm} {background-color: $gray-1;}
 }
 
 a {

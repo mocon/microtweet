@@ -15,6 +15,7 @@
 .col-tweets {
   padding-left: $double-unit;
   padding-right: $double-unit;
+  background-color: $gray-3;
   
   @media #{$sm} {margin-top: auto;}
   

@@ -10,6 +10,7 @@ header {
   background-color: $gray-4;
   z-index: 2;
   @extend .box-shadow;
+  @extend .transition;
 }
 
 // Logo icon
@@ -67,6 +68,8 @@ header li a, header .user-avatar {
 header .user-avatar {
   background-image: url("https://avatars2.githubusercontent.com/u/4172870?v=3&s=460");
   background-size: cover;
+  
+  @media #{$sm} {cursor: pointer;}
 }
 
 header .search {

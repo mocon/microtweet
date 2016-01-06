@@ -1,0 +1,56 @@
+// ----------------------------------------------------
+// Off canvas navigation styles
+// ----------------------------------------------------
+.app-wrapper {
+  position: relative;
+  overflow: scroll;
+  width: 100%;
+  height: 100%;
+  
+  .app-canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: scroll;
+    @extend .transition;
+  }
+}
+
+.app-left-menu, .app-right-menu {
+  width: $off-canvas-width;
+  height: 100%;
+  padding: $single-unit $double-unit;
+  background: $gray-3;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  @extend .transition;
+  
+  label, li {font-size: $font-size * 1.2;}
+  
+  li {
+    line-height: $line-height * 1.2;
+    
+    a {color: $pri-2;}
+  }
+}
+
+.app-left-menu {
+  left: (-$off-canvas-width);
+  box-shadow: inset -10px 1px 30px -6px rgba(0,0,0,.1);
+}
+
+.app-right-menu {
+  right: (-$off-canvas-width);
+  box-shadow: inset 10px 1px 30px -6px rgba(0,0,0,.1);
+}
+
+// When .show-left-nav applied to <body>
+.show-left-nav .app-left-menu {left: 0}
+.show-right-nav .app-right-menu {right: 0;}
+
+.show-left-nav .app-canvas {transform: translateX($off-canvas-width);}
+.show-right-nav .app-canvas {transform: translateX(- $off-canvas-width);}
+
+.show-left-nav header {transform: translateX($off-canvas-width);}
+.show-right-nav header {transform: translateX(- $off-canvas-width);}
