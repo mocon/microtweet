@@ -22,13 +22,15 @@ button {
   
   // Small buttons in <li>s
   &.add {
-    display: block;
+    display: inline-block;
     width: $double-unit;
     height: $double-unit;
     line-height: $double-unit;
     background: transparent;
     border: 1px solid $gray-2;
     border-radius: 3px;
+    text-align: center;
+    padding: 0;
     
     &:active {
       background: $gray-2;

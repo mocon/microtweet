@@ -4,15 +4,14 @@
 .app-wrapper {
   position: relative;
   overflow: scroll;
-  width: 100%;
-  height: 100%;
+  @extend .fill;
   
   .app-canvas {
-    width: 100%;
-    height: 100%;
     position: absolute;
     overflow: scroll;
+    @extend .fill;
     @extend .transition;
+    z-index: 2;
   }
 }
 
@@ -23,7 +22,7 @@
   background: $gray-3;
   position: absolute;
   top: 0;
-  z-index: 3;
+  z-index: 1;
   @extend .transition;
   
   label, li {font-size: $font-size * 1.2;}
@@ -36,16 +35,23 @@
 }
 
 .app-left-menu {
+  display: none;
   left: (-$off-canvas-width);
   box-shadow: inset -10px 1px 30px -6px rgba(0,0,0,.1);
 }
 
 .app-right-menu {
+  display: none;
   right: (-$off-canvas-width);
   box-shadow: inset 10px 1px 30px -6px rgba(0,0,0,.1);
 }
 
 // When .show-left-nav applied to <body>
+
+.show-left-nav .app-left-menu, .show-right-nav .app-right-menu {
+  display: block !important;
+}
+
 .show-left-nav .app-left-menu {left: 0}
 .show-right-nav .app-right-menu {right: 0;}
 
