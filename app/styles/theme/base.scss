@@ -1,15 +1,13 @@
 // ----------------------------------------------------
 // Base styles
 // ----------------------------------------------------
-html, body {
-  @extend .fill;
-}
+html, body {@extend .fill;}
 
 body {
   font-family: $hind;
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 300;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $light-text;
   background-color: $gray-3;
 }
 
@@ -28,9 +26,14 @@ ul {
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: 600;
+  font-weight: $heavy-text;
+  line-height: $line-height;
 }
 
-p {
-  margin-bottom: 15px;
+label {
+  font-weight: $light-text;
+  text-transform: uppercase;
+  @extend .no-margin;
 }
+
+p {margin-bottom: $single-unit;}

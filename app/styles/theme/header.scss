@@ -1,10 +1,4 @@
 // ----------------------------------------------------
-// Header variables
-// ----------------------------------------------------
-$header-height: 80px; // can be used to adjust entire header
-
-
-// ----------------------------------------------------
 // Header styles
 // ----------------------------------------------------
 header {
@@ -29,9 +23,7 @@ header .fa-twitter {
   line-height: $header-height;
 }
 
-header ul {
-  white-space: nowrap;
-}
+header ul {white-space: nowrap;}
 
 // Left navigation links
 header li {
@@ -49,7 +41,7 @@ header li {
   &:first-child {
     border-right: 1px solid $gray-2;
     margin-right: 10px;
-    padding-right: 15px;
+    padding-right: $single-unit;
     color: white;
     
     a {

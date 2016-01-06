@@ -5,7 +5,9 @@ $icon-font-path: '../fonts/';
 // endbower
 
 @import "theme/variables.scss";
+@import "theme/config.scss";
 @import "theme/base.scss";
 @import "theme/header.scss";
 @import "theme/main.scss";
+@import "theme/tweets.scss";
 @import "theme/forms.scss";

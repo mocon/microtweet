@@ -1,0 +1,51 @@
+// Tweets
+.tweets > li {
+  position: relative;
+  overflow: hidden;
+  padding: $double-unit $double-unit ($double-unit * 0.6666666666);
+  border-bottom: 1px solid $gray-3;
+  
+  .avatar {
+    position: absolute;
+    top: $double-unit;
+    left: $double-unit;
+    margin-right: $single-unit;
+    
+    img {
+      width: $header-height / 2;
+      height: $header-height / 2;
+      border-radius: $header-height / 4;
+    }
+  }
+  
+  .post {
+    padding-left: $header-height / 2 + $single-unit;
+    
+    h4 {
+      margin: 0;
+      float: left;
+      
+      small {
+        font-size: $font-size;
+        color: $gray-2;
+      }
+      
+      a {color: $gray-1;}
+      
+      .fa-refresh {color: $green-1;}
+    }
+    
+    .date {
+      float: right;
+      font-size: $font-size;
+      color: $gray-2;
+    }
+    
+    li {
+      display: inline-block;
+      margin: $single-unit $single-unit 0 0;
+    }
+    
+    a {color: $gray-2;}
+  }
+}

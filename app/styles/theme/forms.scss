@@ -9,8 +9,8 @@ button {
   
   &.large {
     width: 70%;
-    padding: 10px;
-    border-radius: 27px;
+    padding: $single-unit;
+    border-radius: $double-unit;
     
     &.primary {
       background-color: $pri-1;
