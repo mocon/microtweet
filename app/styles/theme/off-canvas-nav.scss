@@ -35,25 +35,26 @@
   }
 }
 
+.app-left-menu, .app-right-menu {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .app-left-menu {
-  display: none;
-  left: (-$off-canvas-width);
+  left: 0;
   box-shadow: inset -10px 1px 30px -6px rgba(0,0,0,.1);
 }
 
 .app-right-menu {
-  display: none;
-  right: (-$off-canvas-width);
+  right: 0;
   box-shadow: inset 10px 1px 30px -6px rgba(0,0,0,.1);
-}
+} 
 
 // When .show-left-nav applied to <body>
 .show-left-nav .app-left-menu, .show-right-nav .app-right-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
-
-.show-left-nav .app-left-menu {left: 0}
-.show-right-nav .app-right-menu {right: 0;}
 
 .show-left-nav .app-canvas {transform: translateX($off-canvas-width);}
 .show-right-nav .app-canvas {transform: translateX(- $off-canvas-width);}
