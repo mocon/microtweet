@@ -48,9 +48,8 @@
 }
 
 // When .show-left-nav applied to <body>
-
 .show-left-nav .app-left-menu, .show-right-nav .app-right-menu {
-  display: block !important;
+  display: block;
 }
 
 .show-left-nav .app-left-menu {left: 0}
